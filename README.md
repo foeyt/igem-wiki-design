@@ -20,8 +20,8 @@
 
 ### 本地部署项目
 
-1.   `clone` 该仓库到本地。
-
+1. `clone` 该仓库到本地。
+   
    ```shell
    git clone https://github.com/foeyt/igem-wiki-design.git
    ```
