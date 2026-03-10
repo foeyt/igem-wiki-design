@@ -57,7 +57,7 @@
    git pull origin main
    ```
 
-2. 创建并切换到新分支。
+2. 创建并切换到新分支，分支命名请输入自己的 GitHub Name 并小写，用 “-” 代替空格。
 
    ```shell
    git checkout -b <branch_name>
@@ -66,9 +66,9 @@
 3. 在新的分支上编写代码并提交，建议经常提交代码，提交信息按照下面的格式，建议使用英文。
 
    ```txt
-   添加新功能：[Add]<Username>: 新功能介绍
-   更新源代码：[Update]<Username>: 更新内容
-   修改 Bug: [Fix]<Username>: 修改的 Bug
+   添加新功能：[Add]<GitHub Name>: 新功能介绍
+   更新源代码：[Update]<GitHub Name>: 更新内容
+   修改 Bug: [Fix]<GitHub Name>: 修改的 Bug
    ```
 
 4. 本地分支推送到 GitHub。
