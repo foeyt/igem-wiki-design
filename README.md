@@ -100,7 +100,7 @@
 
 **排名不分先后**
 
-- <img src="https://avatars.githubusercontent.com/u/91649940?v=4" alt="img" style="zoom:20%;" /> @foeyt        李有鑫，目前小组组长，代码审查、主页大纲设计、美术
-- <img src="https://avatars.githubusercontent.com/u/255333661?v=4" alt="View Jody-Liang97's full-sized avatar" style="zoom:20%;" />@Jody-Liang97        梁九畦，主页大纲设计、美术
-- <img src="https://avatars.githubusercontent.com/u/257213519?v=4" alt="View jiaqi223's full-sized avatar" style="zoom:22%;" />@jiaqi223        景佳琪，主页内容填充、动画效果、测试
-- <img src="https://avatars.githubusercontent.com/u/249010543?v=4" alt="View yinuogit's full-sized avatar" style="zoom:22%;" />@yinuogit        刘一诺，主页内容填充、动画效果、测试
+- <img src="https://avatars.githubusercontent.com/u/91649940?v=4" alt="img" style="height:100px; width=100px;"></img><br/><a href="https://github.com/foeyt">@foeyt</a><p>李有鑫，目前小组组长，代码审查、主页大纲设计、美术</p>
+- <img src="https://avatars.githubusercontent.com/u/255333661?v=4" alt="View Jody-Liang97's full-sized avatar" style="height:100px; width=100px;" /><br/><a href="https://github.com/Jody-Liang97">@Jody-Liang97</a><p>梁九畦，主页大纲设计、美术</p>
+- <img src="https://avatars.githubusercontent.com/u/257213519?v=4" alt="View jiaqi223's full-sized avatar" style="height:100px; width=100px;" /><br/><a href="https://github.com/jiaqi223">@jiaqi223</a><p>景佳琪，主页内容填充、动画效果、测试</p>
+- <img src="https://avatars.githubusercontent.com/u/249010543?v=4" alt="View yinuogit's full-sized avatar" style="height:100px; width=100px;" /><br/><a href="https://github.com/yinuogit">@yinuogit</a><p>刘一诺，主页内容填充、动画效果、测试</p>
