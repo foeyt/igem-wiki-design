@@ -53,8 +53,8 @@
 1. 确保本地仓库处于最新状态。
 
    ```shell
-   git checkout main
-   git pull origin main
+   git checkout master
+   git pull origin master
    ```
 
 2. 创建并切换到新分支，分支命名请输入自己的 GitHub Name 并小写，用 “-” 代替空格。
@@ -81,16 +81,16 @@
 
    ```shell
    方法一：合并（merge）
-   git checkout main
-   git pull origin main      # 更新本地 main
+   git checkout master
+   git pull origin master      # 更新本地 main
    git checkout <branch_name>
-   git merge main            # 将 main 的更新合并到当前分支
+   git merge master            # 将 main 的更新合并到当前分支
    # 如有冲突，解决后提交
    
    方法二：变基（rebase）（使历史更线性）
    git checkout <branch_name>
    git fetch origin          # 获取远程更新
-   git rebase origin/main    # 将当前分支变基到最新的 main
+   git rebase origin/master    # 将当前分支变基到最新的 main
    # 如有冲突，解决后 git add . 然后 git rebase --continue
    ```
 
@@ -98,4 +98,9 @@
 
 ## 团队分工
 
-[施工中]
+**排名不分先后**
+
+- <img src="https://avatars.githubusercontent.com/u/91649940?v=4" alt="img" style="zoom:20%;" /> @foeyt        李有鑫，目前小组组长，代码审查、主页大纲设计、美术
+- <img src="https://avatars.githubusercontent.com/u/255333661?v=4" alt="View Jody-Liang97's full-sized avatar" style="zoom:20%;" />@Jody-Liang97        梁九畦，主页大纲设计、美术
+- <img src="https://avatars.githubusercontent.com/u/257213519?v=4" alt="View jiaqi223's full-sized avatar" style="zoom:22%;" />@jiaqi223        景佳琪，主页内容填充、动画效果、测试
+- <img src="https://avatars.githubusercontent.com/u/249010543?v=4" alt="View yinuogit's full-sized avatar" style="zoom:22%;" />@yinuogit        刘一诺，主页内容填充、动画效果、测试
