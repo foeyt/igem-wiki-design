@@ -8,15 +8,18 @@
 ├─doc/	项目文档目录，存放技术文档、说明文档等
 	├Structure.md	项目结构说明文档
 	└Installation.md	项目安装部署指南文档
-├─public/	静态资源目录，存放不需要编译的公共资源文件（如 favicon、字体等）
+├─public/	静态资源目录，存放不需要编译的公共资源文件（如 favicon、字体、第三方库等）
+	├─assets	存放静态资源，图片、字体等，分别存储到下面的 img/ttf 等目录下
+	├─lib	存放第三方库的静态 JS 脚本
+	└favicon.ico	网站的 icon
 ├─src/	源代码目录，存放项目主要开发代码
 	├─common	公共模块目录，存放通用配置、常量、工具类等
 	├─components	组件目录，存放可复用的 UI 组件
 	├─hooks	自定义 Hooks 目录，存放 React 自定义 Hook 函数
-	├─md	Markdown 文件目录，存放项目相关的 MD 文档或内容
+	├─md	Markdown 文件目录，存放文档记录
 	├─pages	页面目录，存放各路由页面对应的组件
 	├─styles	样式文件目录，存放全局或模块化的 CSS/SCSS 样式
-	└─utils	工具函数目录，存放通用的辅助函数
+	├─utils	工具函数目录，存放通用的辅助函数
 	└main.jsx	应用入口文件，React 应用的启动入口
 ├.gitignore	Git 忽略文件配置，指定哪些文件不需要提交到版本控制
 ├eslint.config.js	ESLint 配置文件，定义代码规范和检查规则
