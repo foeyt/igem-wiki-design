@@ -1,0 +1,182 @@
+/* src/components/SoilLoader.css */
+
+
+:root {
+  /* 背景色 */
+  --soil-bg-page: #d6a04fd3;       /* 页面整体背景 */
+  
+  /* 土壤色系 */
+  --soil-color-main: #8B4513;    /* 土壤主色 (SaddleBrown) */
+  --soil-shadow: rgba(0, 0, 0, 0.3); /* 土壤阴影 */
+  
+  
+  /* 文字颜色 */
+  --text-color: #5D4037;         /* 加载文字 (深棕色) */
+
+  
+  /* 土壤色系 - 加深一点更有质感 */
+  --soil-color: #5D4037;
+  --soil-highlight: #795548;
+  
+  /* 鼹鼠色系 */
+  --mole-color: #3E2723; /* 深褐色皮毛 */
+  --mole-nose: #FFAB91;  /* 粉嫩鼻子 */
+  --mole-paw: #D7CCC8;   /* 浅色爪子 */
+  
+
+}
+
+
+
+/* 容器样式 */
+.soil-loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--soil-bg-page);
+}
+
+/* 主动画容器 */
+.soil-loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+
+
+.soil-hole {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  width: 100%;
+  height: 60%; /* 土壤占据下半部分 */
+  background: radial-gradient(circle, var(--soil-highlight) 0%, var(--soil-color) 100%);
+  border-radius: 40% 40% 50% 50% / 10% 10% 20% 20%; /* 椭圆土堆形状 */
+  box-shadow: inset 0 10px 20px var(--soil-shadow); 
+  z-index: 10; /* 确保土壤在鼹鼠前面遮挡 */
+  overflow: hidden; /* 隐藏溢出 */
+}
+
+/* 飞溅的泥土颗粒 (装饰) */
+.dirt-particle {
+  position: absolute;
+  background-color: var(--soil-color);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+/* 简单的颗粒动画 */
+.p1 { width: 10px; height: 10px; bottom: 10px; left: 20%; animation: flyDirt 1.5s infinite; }
+.p2 { width: 8px; height: 8px; bottom: 15px; right: 30%; animation: flyDirt 1.5s infinite 0.2s; }
+.p3 { width: 6px; height: 6px; bottom: 5px; left: 60%; animation: flyDirt 1.5s infinite 0.4s; }
+
+
+.mole {
+  position: absolute;
+  top:20px;
+
+  bottom: auto; /* 初始位置在土里 */
+  left: 50%;
+   transform: translateX(-50%) translateY(-100%) rotate(180deg);
+  z-index: 5; /* 在土壤后面，但在背景前面 */
+  width: 60px;
+  height: 70px;
+  /* 鼹鼠的整体动画 */
+  animation: molePopDown 3s cubic-bezier(0.5, 0.05, 0.1, 0.3) infinite;
+}
+
+
+
+.mole-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--mole-color);
+  border-radius: 50% 50% 45% 45%;
+  box-shadow: inset -5px -5px 10px rgba(0,0,0,0.3);
+}
+
+/* 鼻子 */
+.mole-nose {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 8px;
+  background-color: var(--mole-nose);
+  border-radius: 50%;
+  border: 2px solid #3E2723;
+}
+
+/* 眼睛 */
+.mole-eye {
+  position: absolute;
+  top: 30px;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+  animation: blink 3s infinite; /* 眨眼动画 */
+}
+.mole-eye.left { left: 12px; }
+.mole-eye.right { right: 12px; }
+
+/* 爪子 */
+.mole-paw {
+  position: absolute;
+  top: 8px;
+  width: 12px;
+  height: 16px;
+  background-color: var(--mole-paw);
+  border-radius: 10px;
+  border: 1px solid #3E2723;
+}
+.mole-paw.left { left: 5px; transform: rotate(-20deg); }
+.mole-paw.right { right: 5px; transform: rotate(20deg); }
+
+/* 文字样式 */
+.loading-text {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  animation: textFade 1.5s infinite alternate;
+}
+
+
+/* 1. 鼹鼠出洞动画 */
+@keyframes molePopDown {
+  0% { transform: translateX(-50%) translateY(-100%) rotate(180deg); } /* 藏在土里 */
+  10% { transform: translateX(-50%) translateY(-100%) rotate(180deg); }
+  30% { transform: translateX(-50%) translateY(0) rotate(180deg); }   /* 钻出来 */
+  40% { transform: translateX(-55%) translateY(0) rotate(175deg); } /* 向左看 */
+  50% { transform: translateX(-45%) translateY(0) rotate(185deg); }  /* 向右看 */
+  60% { transform: translateX(-50%) translateY(0) rotate(180deg); }   /* 回正 */
+  80% { transform: translateX(-50%) translateY(0) rotate(180deg); }   /* 停留 */
+  100% { transform: translateX(-50%) translateY(-100%) rotate(180deg); } /* 缩回去 */
+}
+
+
+/* 2. 泥土飞溅 */
+@keyframes flyDirt {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-40px) scale(0.5); opacity: 0; }
+}
+
+/* 3. 眨眼 */
+@keyframes blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+/* 4. 文字呼吸 */
+@keyframes textFade {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}

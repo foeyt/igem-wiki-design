@@ -1,12 +1,17 @@
-import { useState } from "react";
+
 import "./styles/app.css"
+import React, { useState, useEffect } from 'react';
+import Home from "./pages/Home";
 
 function App() {
-    return (
-        <>
-            <h1>测试</h1>
-        </>
-    )
+  
+
+  return (
+    <div>
+        <Home/>
+     
+    </div>
+  );
 }
 
-export default App
+export default App;
