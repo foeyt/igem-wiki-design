@@ -1,10 +1,14 @@
+import HeroSection from "./components/HeroSection";
+import TunnelSection from "./components/TunnelSection";
+
 function App() {
   return (
     <div>
-      <h1>iGEM Wiki Home</h1>
-      <p>这是我的主页测试内容。</p>
+      <h1>App 正常</h1>
+      <HeroSection />
+      <TunnelSection />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

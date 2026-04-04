@@ -1,0 +1,29 @@
+.mole-scene {
+  margin-top: 20px;
+  border: 2px solid blue;
+}
+
+.ground-top {
+  height: 120px;
+  background: #d8c3a5;
+}
+
+.burrow-hole {
+  width: 100px;
+  height: 40px;
+  background: #5c4033;
+  border-radius: 50%;
+  margin: -20px auto 0;
+}
+
+.mole {
+  font-size: 48px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.ground-bottom {
+  height: 180px;
+  background: #8b5e3c;
+  margin-top: 10px;
+}
