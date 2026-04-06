@@ -1,0 +1,89 @@
+.navbar {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #A1790E;
+  padding: 0 40px;
+  z-index: 999;
+
+  font-weight: bold;
+  color: #453105;
+  font-family: "Comic Sans MS", "Baloo", cursive;
+}
+
+/* LOGO */
+.logo img {
+    height: 40px;
+}
+
+/* 菜单 */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* 单个按钮 */
+.navItem {
+    position: relative;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* 文字 */
+.text {
+    position: relative;
+    z-index: 2;
+}
+
+/* 背景层（重点） */
+.bg {
+    position: absolute;
+    inset: 0;
+    background: #0B570A;
+    border-radius: 12px;
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Dropdown */
+.dropdownWrapper {
+    position: relative;
+}
+
+/* 下拉菜单 */
+.dropdownMenu {
+    position: absolute;
+    top: 120%;
+    left: 0;
+
+    padding: 10px 16px;
+    border-radius: 12px;
+
+    background: rgba(11, 87, 10, 0.7);
+    backdrop-filter: blur(10px);
+
+    color: white;
+    min-width: 120px;
+}
+
+/* 波浪线 */
+.wave {
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+
+    background: #3D2C06;
+    border-radius: 50% 50% 0 0;
+}

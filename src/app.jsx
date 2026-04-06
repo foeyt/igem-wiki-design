@@ -1,11 +1,10 @@
 import { useState } from "react";
 import "./styles/app.css"
+import Navbar from "./components/navbar/navbar";
 
 function App() {
     return (
-        <>
-            <h1>测试</h1>
-        </>
+        <Navbar />
     )
 }
 
