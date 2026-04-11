@@ -4,6 +4,10 @@ import "../styles/problem.css";
 function ProblemSection() {
   return (
     <section className="problem-section" id="problem">
+      <div className="soft-divider top"></div>
+      <div className="problem-deco deco-1"></div>
+      <div className="problem-deco deco-2"></div>
+
       <div className="problem-container">
         <div className="section-heading">
           <p className="section-tag">The Problem</p>
@@ -15,7 +19,7 @@ function ProblemSection() {
         </div>
 
         <div className="problem-grid">
-          <div className="problem-card">
+          <div className="problem-card card-hover-lift">
             <div className="problem-icon">01</div>
             <h3>Pollution</h3>
             <p>
@@ -24,7 +28,7 @@ function ProblemSection() {
             </p>
           </div>
 
-          <div className="problem-card">
+          <div className="problem-card card-hover-lift">
             <div className="problem-icon">02</div>
             <h3>Degradation</h3>
             <p>
@@ -33,7 +37,7 @@ function ProblemSection() {
             </p>
           </div>
 
-          <div className="problem-card">
+          <div className="problem-card card-hover-lift">
             <div className="problem-icon">03</div>
             <h3>Microbial Imbalance</h3>
             <p>

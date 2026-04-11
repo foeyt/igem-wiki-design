@@ -4,6 +4,10 @@ import "../styles/solution.css";
 function SolutionSection() {
   return (
     <section className="solution-section" id="solution">
+      <div className="soft-divider top"></div>
+      <div className="solution-leaf leaf-a"></div>
+      <div className="solution-leaf leaf-b"></div>
+
       <div className="solution-container">
         <div className="solution-left">
           <p className="section-tag green-tag">Our Solution</p>
@@ -16,7 +20,7 @@ function SolutionSection() {
           </p>
 
           <div className="solution-points">
-            <div className="solution-point">
+            <div className="solution-point card-hover-lift">
               <span className="point-dot"></span>
               <div>
                 <h4>Detect</h4>
@@ -24,7 +28,7 @@ function SolutionSection() {
               </div>
             </div>
 
-            <div className="solution-point">
+            <div className="solution-point card-hover-lift">
               <span className="point-dot"></span>
               <div>
                 <h4>Respond</h4>
@@ -32,7 +36,7 @@ function SolutionSection() {
               </div>
             </div>
 
-            <div className="solution-point">
+            <div className="solution-point card-hover-lift">
               <span className="point-dot"></span>
               <div>
                 <h4>Support Sustainability</h4>
@@ -46,17 +50,17 @@ function SolutionSection() {
           <div className="solution-visual">
             <div className="solution-circle circle-1"></div>
             <div className="solution-circle circle-2"></div>
-            <div className="solution-card small-card top-card">
+            <div className="solution-card small-card top-card card-hover-lift">
               <h4>Input</h4>
               <p>Soil data & environment</p>
             </div>
-            <div className="solution-card big-card center-card">
+            <div className="solution-card big-card center-card card-hover-lift">
               <h3>Bio-inspired Soil System</h3>
               <p>
                 A concept that links detection, analysis, and meaningful action.
               </p>
             </div>
-            <div className="solution-card small-card bottom-card">
+            <div className="solution-card small-card bottom-card card-hover-lift">
               <h4>Output</h4>
               <p>Insight, balance, sustainability</p>
             </div>

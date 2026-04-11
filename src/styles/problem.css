@@ -1,11 +1,37 @@
 .problem-section {
-  padding: 110px 32px;
+  padding: 120px 32px;
   background: linear-gradient(180deg, #f7f3e8 0%, #fdfaf2 100%);
+  overflow: hidden;
 }
 
 .problem-container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.problem-deco {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  animation: floatUpDown 6s ease-in-out infinite;
+}
+
+.deco-1 {
+  width: 220px;
+  height: 220px;
+  background: rgba(206, 179, 133, 0.14);
+  top: 80px;
+  left: -70px;
+}
+
+.deco-2 {
+  width: 160px;
+  height: 160px;
+  background: rgba(168, 205, 125, 0.16);
+  bottom: 80px;
+  right: -40px;
 }
 
 .section-heading {
@@ -45,29 +71,22 @@
 }
 
 .problem-card {
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.82);
   border: 1px solid rgba(122, 99, 74, 0.08);
-  border-radius: 28px;
-  padding: 32px 28px;
-  box-shadow: 0 12px 30px rgba(100, 80, 50, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.problem-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 36px rgba(100, 80, 50, 0.12);
+  border-radius: 30px;
+  padding: 34px 28px;
+  box-shadow: 0 14px 34px rgba(100, 80, 50, 0.08);
+  backdrop-filter: blur(6px);
 }
 
 .problem-icon {
   width: 54px;
   height: 54px;
-  border-radius: 16px;
+  border-radius: 18px;
   margin-bottom: 20px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: linear-gradient(135deg, #d9bf95, #b78a64);
   color: white;
   font-weight: 700;
@@ -94,7 +113,7 @@
 
 @media (max-width: 700px) {
   .problem-section {
-    padding: 80px 20px;
+    padding: 85px 20px;
   }
 
   .section-heading h2 {

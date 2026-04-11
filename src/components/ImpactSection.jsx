@@ -4,6 +4,10 @@ import "../styles/impact.css";
 function ImpactSection() {
   return (
     <section className="impact-section" id="impact">
+      <div className="soft-divider top"></div>
+      <div className="impact-glow glow-1"></div>
+      <div className="impact-glow glow-2"></div>
+
       <div className="impact-container">
         <div className="section-heading">
           <p className="section-tag blue-tag">Why It Matters</p>
@@ -16,7 +20,7 @@ function ImpactSection() {
         </div>
 
         <div className="impact-grid">
-          <div className="impact-box large-box">
+          <div className="impact-box large-box card-hover-lift">
             <h3>For Agriculture</h3>
             <p>
               Healthier soil supports stronger crops, better productivity, and
@@ -24,7 +28,7 @@ function ImpactSection() {
             </p>
           </div>
 
-          <div className="impact-box">
+          <div className="impact-box card-hover-lift">
             <h3>For Environment</h3>
             <p>
               Better soil management can contribute to ecological balance and
@@ -32,7 +36,7 @@ function ImpactSection() {
             </p>
           </div>
 
-          <div className="impact-box">
+          <div className="impact-box card-hover-lift">
             <h3>For Society</h3>
             <p>
               Sustainable soil solutions matter for food security, public health,
@@ -40,7 +44,7 @@ function ImpactSection() {
             </p>
           </div>
 
-          <div className="impact-box wide-box">
+          <div className="impact-box wide-box card-hover-lift">
             <h3>For the Future</h3>
             <p>
               We hope to present a project that is scientifically meaningful,

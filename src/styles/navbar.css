@@ -10,6 +10,11 @@
   border-bottom: 1px solid rgba(120, 100, 70, 0.12);
 }
 
+.navbar-links a.active {
+  color: #7da13b;
+  font-weight: 700;
+}
+
 .navbar-container {
   max-width: 1200px;
   height: 78px;
