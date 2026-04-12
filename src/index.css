@@ -1,0 +1,70 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background: #fffaf2;
+  color: #4a3728;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+}
+
+.section-heading h2,
+.solution-left h2 {
+  letter-spacing: -0.5px;
+}
+
+.soft-divider {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.soft-divider.top {
+  top: -60px;
+}
+
+.soft-divider.bottom {
+  bottom: -60px;
+}
+
+.soft-divider::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 50%),
+              radial-gradient(circle at 70% 50%, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 45%);
+}
+
+.float-deco {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.card-hover-lift {
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-8px);
+}

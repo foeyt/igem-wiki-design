@@ -1,0 +1,122 @@
+.problem-section {
+  padding: 120px 32px;
+  background: linear-gradient(180deg, #f7f3e8 0%, #fdfaf2 100%);
+  overflow: hidden;
+}
+
+.problem-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.problem-deco {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  animation: floatUpDown 6s ease-in-out infinite;
+}
+
+.deco-1 {
+  width: 220px;
+  height: 220px;
+  background: rgba(206, 179, 133, 0.14);
+  top: 80px;
+  left: -70px;
+}
+
+.deco-2 {
+  width: 160px;
+  height: 160px;
+  background: rgba(168, 205, 125, 0.16);
+  bottom: 80px;
+  right: -40px;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.section-tag {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #eee6d6;
+  color: #8b6b4f;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.section-heading h2 {
+  font-size: 44px;
+  line-height: 1.2;
+  color: #4a3728;
+  margin-bottom: 18px;
+}
+
+.section-intro {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #6d5c50;
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.problem-card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(122, 99, 74, 0.08);
+  border-radius: 30px;
+  padding: 34px 28px;
+  box-shadow: 0 14px 34px rgba(100, 80, 50, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.problem-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #d9bf95, #b78a64);
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.problem-card h3 {
+  font-size: 24px;
+  color: #4a3728;
+  margin-bottom: 14px;
+}
+
+.problem-card p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6d5c50;
+}
+
+@media (max-width: 950px) {
+  .problem-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .problem-section {
+    padding: 85px 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+}
