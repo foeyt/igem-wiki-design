@@ -1,89 +1,119 @@
 .navbar {
-  box-sizing: border-box;
   position: fixed;
-  top: 0;
+  top: 0; left: 0;
   width: 100%;
-  left: 0;
-  height: 64px;
-
+  height: clamp(60px, 10vh, 80px);
+  background-color: #A1790E;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  background: #A1790E;
-  padding: 0 40px;
-  z-index: 999;
-
-  font-weight: bold;
-  color: #453105;
-  font-family: "Comic Sans MS", "Baloo", cursive;
+  padding: 0 5%;
+  z-index: 9999;
+  font-family: 'Comic Sans MS', '幼圆', sans-serif;
+  box-sizing: border-box;
+  overflow: visible !important;
 }
 
-/* LOGO */
-.logo img {
-    height: 40px;
+/* 底部波浪线 - 精准修改部分 */
+.navbar::after {
+  content: "";
+  position: absolute;
+  /* 1. 定位在导航栏盒子的最底部之外 */
+  top: 100%; 
+  left: 0;
+  /* 2. 宽度设为200%以支持无缝平移 */
+  width: 200%; 
+  height: 28px; 
+  
+  /* 3. 更换为极其平滑的贝塞尔曲线 SVG */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' fill='%233D2C06'%3E%3C/path%3E%3C/svg%3E");
+  
+  /* 4. 拉大背景尺寸使曲线更缓和，设置 50% 是因为宽度是 200% */
+  background-size: 50% 100%; 
+  background-repeat: repeat-x;
+  pointer-events: none;
+  
+  /* 5. 添加平滑滚动动画 */
+  animation: waveFlow 15s linear infinite;
+  z-index: 9998;
 }
 
-/* 菜单 */
-.menu {
-    display: flex;
-    gap: 20px;
+/* 动画：水平平移 */
+@keyframes waveFlow {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-/* 单个按钮 */
 .navItem {
-    position: relative;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 12px;
-    overflow: hidden;
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #453105;
+  font-weight: bold;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
 }
 
-/* 文字 */
-.text {
-    position: relative;
-    z-index: 2;
+/* 悬浮时的背景圆边长方形 */
+.hoverBg {
+  position: absolute;
+  top: 5px; left: 5px; right: 5px; bottom: 5px;
+  background-color: #0B570A;
+  border-radius: 12px;
+  z-index: -1;
+  /* 初始状态 */
+  opacity: 0;
+  transform: scale(0.8);
+  /* 弹性动画曲线 */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.554);
 }
 
-/* 背景层（重点） */
-.bg {
-    position: absolute;
-    inset: 0;
-    background: #0B570A;
-    border-radius: 12px;
-    opacity: 0;
-    z-index: 1;
+.navItem:hover .hoverBg {
+  opacity: 1;
+  transform: scale(1);
 }
 
-/* Dropdown */
-.dropdownWrapper {
-    position: relative;
+.navItem:hover {
+  color: #FFFFFF !important;
 }
 
-/* 下拉菜单 */
-.dropdownMenu {
-    position: absolute;
-    top: 120%;
-    left: 0;
-
-    padding: 10px 16px;
-    border-radius: 12px;
-
-    background: rgba(11, 87, 10, 0.7);
-    backdrop-filter: blur(10px);
-
-    color: white;
-    min-width: 120px;
+/* 下拉菜单主体 */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  min-width: 140px;
+  background-color: rgba(11, 87, 10, 0.78); /* #0B570A 的透明版 */
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 10px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  
+  /* 动画控制 */
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  
+  /* 关键：增加一个透明层填补间隙，防止鼠标移过去时菜单消失 */
+  border-top: 10px solid transparent;
 }
 
-/* 波浪线 */
-.wave {
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 100%;
-    height: 12px;
+.navItem:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
 
-    background: #3D2C06;
-    border-radius: 50% 50% 0 0;
+.dropdownItem {
+  padding: 10px 20px;
+  color: #fff;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.dropdownItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
 }
