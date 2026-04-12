@@ -8,7 +8,7 @@
 
 ## 在线预览
 
-[正在施工中]
+[链接](https://foeyt.github.io/igem-wiki-design/)
 
 ## 协同开发
 
