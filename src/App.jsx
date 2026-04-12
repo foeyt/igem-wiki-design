@@ -10,6 +10,8 @@ import Project from "./pages/Project";
 import WetLab from "./pages/WetLab";
 import Team from "./pages/Team";
 
+import BackToTopButton from "./components/BackToTopButton";
+
 function App() {
   return (
     <>
@@ -21,6 +23,7 @@ function App() {
         <Route path="/wetlab" element={<WetLab />} />
         <Route path="/team" element={<Team />} />
       </Routes>
+      <BackToTopButton/>
       <Footer />
     </>
   );

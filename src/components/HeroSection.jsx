@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/hero.css";
+import soilPhoto from "../assets/soil-photo.jpg";
 
 function HeroSection() {
   return (
@@ -36,17 +37,11 @@ function HeroSection() {
 
         <div className="hero-right">
           <div className="hero-visual-card">
-            <div className="soil-layer soil-layer-1"></div>
-            <div className="soil-layer soil-layer-2"></div>
-            <div className="soil-layer soil-layer-3"></div>
-
-            <div className="plant-stem"></div>
-            <div className="plant-leaf leaf-left"></div>
-            <div className="plant-leaf leaf-right"></div>
-
-            <div className="root root-1"></div>
-            <div className="root root-2"></div>
-            <div className="root root-3"></div>
+            <img
+              src={soilPhoto}
+              alt="Soil project visual"
+              className="hero-card-image"
+            />
           </div>
         </div>
       </div>

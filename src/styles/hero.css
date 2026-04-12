@@ -108,91 +108,13 @@
   overflow: hidden;
 }
 
-.soil-layer {
-  position: absolute;
-  left: 0;
+.hero-card-image {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.soil-layer-1 {
-  bottom: 0;
-  height: 130px;
-  background: #7b5a43;
-}
-
-.soil-layer-2 {
-  bottom: 130px;
-  height: 90px;
-  background: #9a7457;
-}
-
-.soil-layer-3 {
-  bottom: 220px;
-  height: 50px;
-  background: #caa27a;
-}
-
-.plant-stem {
-  position: absolute;
-  left: 50%;
-  bottom: 250px;
-  width: 10px;
-  height: 120px;
-  background: #6fa03f;
-  transform: translateX(-50%);
-  border-radius: 10px;
-}
-
-.plant-leaf {
-  position: absolute;
-  background: #8ecb63;
-  border-radius: 100px 100px 100px 100px;
-}
-
-.leaf-left {
-  width: 90px;
-  height: 42px;
-  left: 160px;
-  bottom: 340px;
-  transform: rotate(-28deg);
-}
-
-.leaf-right {
-  width: 96px;
-  height: 44px;
-  left: 212px;
-  bottom: 315px;
-  transform: rotate(28deg);
-}
-
-.root {
-  position: absolute;
-  width: 4px;
-  background: #ead9bc;
-  border-radius: 10px;
-  transform-origin: top center;
-}
-
-.root-1 {
-  height: 90px;
-  left: 220px;
-  bottom: 190px;
-  transform: rotate(20deg);
-}
-
-.root-2 {
-  height: 110px;
-  left: 225px;
-  bottom: 185px;
-  transform: rotate(-8deg);
-}
-
-.root-3 {
-  height: 85px;
-  left: 235px;
-  bottom: 195px;
-  transform: rotate(-28deg);
-}
 
 .hero-background-shape {
   position: absolute;
@@ -265,55 +187,5 @@
     width: 320px;
     height: 360px;
   }
-
-  .plant-stem {
-    height: 90px;
-    bottom: 195px;
-  }
-
-  .leaf-left {
-    width: 70px;
-    height: 34px;
-    left: 100px;
-    bottom: 258px;
-  }
-
-  .leaf-right {
-    width: 74px;
-    height: 36px;
-    left: 150px;
-    bottom: 240px;
-  }
-
-  .root-1 {
-    height: 70px;
-    left: 157px;
-    bottom: 145px;
-  }
-
-  .root-2 {
-    height: 80px;
-    left: 162px;
-    bottom: 140px;
-  }
-
-  .root-3 {
-    height: 65px;
-    left: 172px;
-    bottom: 148px;
-  }
-
-  .soil-layer-1 {
-    height: 100px;
-  }
-
-  .soil-layer-2 {
-    height: 70px;
-    bottom: 100px;
-  }
-
-  .soil-layer-3 {
-    height: 40px;
-    bottom: 170px;
-  }
+  
 }

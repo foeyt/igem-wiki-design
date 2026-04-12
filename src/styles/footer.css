@@ -78,7 +78,8 @@
 
 .footer-column a,
 .footer-column p {
-  font-size: 15px;
+  font-size: 17px;
+  font-weight: 450;
   color: #6a5a4e;
   text-decoration: none;
   line-height: 1.7;

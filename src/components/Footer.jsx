@@ -37,15 +37,14 @@ function Footer() {
             <div className="footer-column">
               <h4>Contact</h4>
               <p>USTC iGEM Team</p>
-              <p>Advisor Presentation Draft</p>
-              <p>iGEM 2025</p>
+              <p>iGEM 2026</p>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© 2025 Soil iGEM Team. All rights reserved.</p>
-          <p>Designed for iGEM project presentation.</p>
+          <p>© 2026 Soil iGEM Team. All rights reserved.</p>
+          <p>Designed for iGEM project.</p>
         </div>
       </div>
     </footer>

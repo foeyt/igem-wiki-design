@@ -7,7 +7,7 @@
 
   background: rgba(255, 252, 245, 0.88);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(120, 100, 70, 0.12);
+  border-bottom: 3px solid rgba(120, 100, 70, 0.12);
 }
 
 .navbar-links a.active {
